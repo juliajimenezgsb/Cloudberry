@@ -1,0 +1,342 @@
+.mode-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 23px 0 15px;
+}
+.mode-picker button {
+  background: #fff6;
+  border: 1.5px solid #fff9;
+  border-radius: 16px;
+  padding: 15px 8px;
+  color: #9c86ad;
+  font-size: 13px;
+  min-height: 66px;
+}
+.mode-picker button[aria-pressed="true"] {
+  background: #fbf5fc;
+  border-color: #ad95bf;
+  box-shadow: 0 3px 12px #9883a014;
+}
+.mode-picker small {
+  display: block;
+  font-size: 9px;
+  color: #af9db8;
+  margin-top: 5px;
+}
+.journey-intro {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #f9f5ee99;
+  border: 1px solid #fff9;
+  border-radius: 19px;
+  text-align: left;
+  padding: 19px;
+  color: #98aa8d;
+  margin: 24px 0 14px;
+}
+.journey-intro > svg {
+  flex-shrink: 0;
+}
+.journey-intro > span {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  color: #8d7a9c;
+}
+.journey-intro small {
+  font:
+    11px/1.7 "DM Sans",
+    sans-serif;
+  color: #a58eac;
+  display: block;
+  margin-top: 5px;
+}
+.music-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  background: #fff6;
+  border-radius: 13px;
+  padding: 13px 15px;
+  font-size: 11px;
+  color: #a08aac;
+  border: 1px solid #fff8;
+  margin: 0 0 20px;
+  min-height: 44px;
+}
+.music-pill > span {
+  margin-left: auto;
+  font-size: 9px;
+  color: #ac97b5;
+}
+.music-pill.on {
+  background: #f2eff8;
+  border-color: #cbb9da;
+}
+.level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  text-align: left;
+}
+.level-card {
+  display: flex;
+  gap: 15px;
+  padding: 21px 18px;
+  background: #fdf9f5b0;
+  border: 1px solid #fff9;
+  border-radius: 22px;
+}
+.level-number {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 42px;
+  border-radius: 13px;
+  background: #e9dfef;
+  color: #a28bb1;
+  font-family: Quicksand, sans-serif;
+  font-size: 18px;
+}
+.level-card.cleared .level-number {
+  background: #e0e9d9;
+  color: #8fa583;
+}
+.level-card.locked {
+  background: #f2ecf56b;
+}
+.level-card.locked .level-number {
+  background: #e9e1ee;
+}
+.level-copy {
+  min-width: 0;
+  flex: 1;
+}
+.level-copy > small {
+  font-size: 7px;
+  letter-spacing: 1.7px;
+  color: #b09abb;
+}
+.level-copy h3 {
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 7px 0;
+}
+.level-copy p {
+  font-size: 11px;
+  margin: 5px 0 11px;
+}
+.level-goals {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.level-goals > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  color: #a08baf;
+}
+.level-goals svg {
+  color: #b7a177;
+}
+.level-reward {
+  font-size: 9px;
+  color: #b09bb6;
+  margin: 13px 0 7px;
+  line-height: 1.5;
+}
+.level-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #a68db9;
+  color: white;
+  border-radius: 11px;
+  padding: 11px 13px;
+  min-height: 42px;
+  font-size: 11px;
+  gap: 8px;
+  width: 100%;
+}
+.level-start:disabled {
+  background: #e6deec;
+  color: #ac98b7;
+  opacity: 1;
+  font-size: 10px;
+}
+.level-hud {
+  position: absolute;
+  top: 94px;
+  left: 22px;
+  right: 22px;
+  display: flex;
+  gap: 13px;
+  font-size: 10px;
+  color: #9982a6;
+  align-items: center;
+  pointer-events: none;
+}
+.level-hud > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.level-hud svg {
+  color: #bba366;
+}
+.destination-progress {
+  margin-left: auto;
+  font-size: 8px;
+  color: #a792b1;
+}
+.game:has(.level-hud) .feather-label {
+  top: 128px;
+}
+.game:has(.level-hud) .wind-indicator {
+  top: 151px;
+}
+.game-music {
+  opacity: 0.65;
+}
+.game-music.on {
+  opacity: 1;
+  color: #a083b6;
+  background: #fff9;
+}
+.game-hud {
+  left: 20px;
+  right: 16px;
+  gap: 10px;
+}
+.game-hud small {
+  max-width: 195px;
+}
+.game-hud .icon-button {
+  flex-shrink: 0;
+  width: 33px;
+  height: 33px;
+}
+.game-hud strong {
+  font-size: 27px;
+}
+.game-hud .star-count {
+  font-size: 12px;
+  gap: 4px;
+}
+.chapter-brief p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 13px 0 18px;
+}
+.chapter-brief .text-button {
+  font-size: 10px;
+  padding-top: 18px;
+  min-height: 40px;
+}
+.next-chapter + .secondary {
+  margin-top: 13px;
+}
+.chapter-brief + .text-button {
+  font-size: 11px;
+}
+.modal .next-chapter {
+  font-size: 13px;
+}
+@media (max-width: 370px) {
+  .level-card {
+    gap: 11px;
+    padding: 18px 13px;
+  }
+  .level-number {
+    width: 31px;
+    height: 37px;
+    font-size: 16px;
+  }
+  .level-copy h3 {
+    font-size: 17px;
+  }
+  .level-copy p {
+    font-size: 10px;
+  }
+  .game-hud small {
+    max-width: 150px;
+    font-size: 8px;
+  }
+  .game-hud {
+    gap: 7px;
+    left: 16px;
+    right: 13px;
+  }
+  .game-hud .icon-button {
+    width: 31px;
+    height: 34px;
+  }
+  .journey-intro {
+    padding: 16px;
+  }
+  .music-pill {
+    font-size: 10px;
+    padding: 12px;
+  }
+  .level-hud {
+    left: 17px;
+    right: 17px;
+    gap: 10px;
+  }
+}
+
+.chapter-home {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 57px;
+  padding: 13px 15px;
+  margin-top: 17px;
+  background: #fcf9f4a0;
+  border: 1px solid #fff9;
+  border-radius: 16px;
+  text-align: left;
+  color: #9a82ac;
+}
+.chapter-home > span {
+  flex: 1;
+  font-size: 12px;
+}
+.chapter-home small {
+  display: block;
+  font-size: 8px;
+  color: #b19db9;
+  margin-top: 4px;
+}
+.chapter-home + .nav-cards {
+  margin-top: 13px;
+}
+.chapter-difficulty {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto 0;
+  border-radius: 25px;
+  background: #fff6;
+  border: 1px solid #fff9;
+  padding: 11px 16px;
+  color: #9e87ad;
+  font-size: 11px;
+  min-height: 40px;
+}
+.chapter-difficulty small {
+  font-size: 9px;
+  color: #b09aba;
+}
+.game-hud .icon-button {
+  min-width: 36px;
+  width: 36px;
+  height: 40px;
+}

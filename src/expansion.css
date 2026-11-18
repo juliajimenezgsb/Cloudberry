@@ -1,0 +1,918 @@
+.location-button {
+  background: transparent;
+  padding: 0;
+  min-height: 25px;
+}
+.expanded {
+  padding-bottom: 35px;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.section-heading h2 {
+  margin: 9px 0;
+}
+.section-subtitle {
+  margin: 0 !important;
+}
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #fff9;
+  background: #fff6;
+  padding: 8px 11px;
+  border-radius: 25px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.balance svg {
+  color: #bea05f;
+  fill: #f6dfab;
+}
+.boutique-stage {
+  height: 236px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 12px;
+  isolation: isolate;
+}
+.boutique-arch {
+  position: absolute;
+  inset: 3px 65px 12px;
+  border-radius: 120px 120px 20px 20px;
+  background: linear-gradient(145deg, #fcf3edbb, #efdae7aa);
+  border: 1px solid #fff9;
+  box-shadow: 0 8px 22px #a185a110;
+  z-index: -1;
+}
+.boutique-arch:after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 13%;
+  right: 13%;
+  height: 16px;
+  border-radius: 50%;
+  background: #cbbacc44;
+}
+.character-preview-canvas {
+  width: 280px;
+  height: 280px;
+  display: block;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+.boutique-stage > .character-preview-canvas {
+  position: absolute;
+  top: -36px;
+}
+.bouncing .character-preview-canvas {
+  width: 205px;
+  height: 205px;
+  margin-top: -10px;
+}
+.boutique-spark {
+  position: absolute;
+  color: #bb9fbd;
+  font-size: 26px;
+}
+.bs1 {
+  left: 50px;
+  top: 65px;
+}
+.bs2 {
+  right: 58px;
+  top: 110px;
+  font-size: 18px;
+}
+.preview-label {
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  color: #a08aa6;
+}
+.boutique-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  background: #ffffff55;
+  border: 1px solid #fff9;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+.boutique-tabs > button {
+  flex: 1;
+  padding: 11px 4px;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 11px;
+  min-width: 0;
+}
+.boutique-tabs > button[aria-selected="true"] {
+  background: #fffaf6;
+  color: #9176a4;
+  box-shadow: 0 2px 8px #9c89a515;
+}
+.item-collection {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 4px 3px 12px;
+  scroll-snap-type: x proximity;
+  scrollbar-color: #c4afd2 transparent;
+  scrollbar-width: thin;
+  text-align: center;
+}
+.boutique-item {
+  flex: 0 0 112px;
+  position: relative;
+  border: 1.5px solid #fff9;
+  border-radius: 16px;
+  background: #fff7;
+  min-height: 141px;
+  padding: 7px 7px 10px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+.boutique-item.active {
+  border-color: #a78db9;
+  background: #fff9;
+}
+.item-picture {
+  height: 77px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.item-picture canvas {
+  width: 120px;
+  height: 120px;
+  margin-top: -10px;
+}
+.boutique-item strong {
+  display: block;
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 500;
+  min-height: 28px;
+}
+.item-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 9px;
+  color: #a28aa8;
+  margin-top: 4px;
+}
+.item-lock {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  color: #ad97b7;
+}
+.swatch {
+  width: 43px;
+  height: 43px;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid #fffa;
+  box-shadow: 0 2px 9px #a089ab15;
+}
+.purchase-panel {
+  background: #fdf9f4b0;
+  border: 1px solid #fffa;
+  border-radius: 19px;
+  padding: 17px;
+  margin-top: 12px;
+}
+.purchase-panel h3 {
+  font-size: 18px;
+}
+.purchase-panel p {
+  font-size: 11px;
+  margin: 5px 0 15px;
+  min-height: 18px;
+}
+.purchase-panel .primary {
+  font-size: 13px;
+  min-height: 47px;
+  box-shadow: 0 3px 0 #8b73a025;
+}
+.purchase-panel .primary:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.purchase-panel > small {
+  display: block;
+  margin-top: 12px;
+  font-size: 9px;
+  color: #aa97af;
+}
+.purchase-panel .shop-message {
+  margin: 13px 0 0;
+  font-size: 10px;
+  min-height: 30px;
+  line-height: 1.5;
+}
+.reset-preview {
+  padding-top: 15px;
+  font-size: 10px;
+}
+.achievement-link {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+  font-size: 11px;
+  margin: 21px auto 0;
+  color: #9b83ad;
+}
+.achievement-link + .gentle {
+  margin-top: 14px;
+}
+.save-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid #ddd1e5;
+  padding-top: 12px;
+  font-size: 11px;
+  color: #9883a5;
+}
+.confetti {
+  position: absolute;
+  inset: 20px 0 0;
+  word-spacing: 18px;
+  color: #c7a565;
+  pointer-events: none;
+  animation: unlock 1.5s ease-out both;
+}
+.unlocked .boutique-arch {
+  animation: glow 1.5s ease-out;
+}
+.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@keyframes unlock {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.4);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-35px) scale(1.2);
+  }
+}
+@keyframes glow {
+  50% {
+    box-shadow: 0 0 40px #e5c17b70;
+  }
+}
+@media (max-width: 650px) {
+  .section-heading {
+    gap: 8px;
+  }
+  .section-heading h2 {
+    font-size: 25px;
+  }
+  .balance {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+  .boutique-stage {
+    height: 215px;
+    margin-top: 10px;
+  }
+  .boutique-stage > .character-preview-canvas {
+    width: 260px;
+    height: 260px;
+    top: -32px;
+  }
+  .boutique-arch {
+    left: 47px;
+    right: 47px;
+  }
+  .bs1 {
+    left: 25px;
+  }
+  .bs2 {
+    right: 27px;
+  }
+  .boutique-item {
+    flex-basis: 106px;
+  }
+  .boutique-tabs > button {
+    font-size: 10px;
+    padding: 12px 2px;
+  }
+  .expanded .back {
+    margin-bottom: 20px;
+  }
+  .home-actions .gentle {
+    font-size: 10px;
+  }
+}
+.lifetime-progress {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #a08aad;
+  margin: 18px 0;
+}
+.lifetime-progress > svg {
+  color: #c0a15e;
+}
+.lifetime-progress > span {
+  flex-basis: 100%;
+  font-size: 9px;
+  color: #a595ae;
+  margin-top: 1px;
+}
+.world-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.world-option {
+  padding: 0;
+  text-align: left;
+  background: #fcf8f6b0;
+  border: 1.5px solid #fff9;
+  border-radius: 19px;
+  overflow: hidden;
+}
+.world-option.previewing {
+  border-color: #a28ab6;
+  box-shadow: 0 4px 13px #9982a31a;
+}
+.world-art {
+  height: 120px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.world-state {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  background: #fff9;
+  border: 1px solid #fffa;
+  border-radius: 20px;
+  font-size: 8px;
+  padding: 5px 7px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #927f9f;
+  z-index: 2;
+}
+.world-orb {
+  position: absolute;
+  top: 31px;
+  left: 37px;
+  width: 30px;
+  height: 30px;
+  background: #fff5dc99;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #ffefc844;
+}
+.moonlight .world-orb {
+  background: #f4ebc9;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 0 23px #f6edc965;
+}
+.sunset .world-orb {
+  width: 47px;
+  height: 47px;
+  background: #ffe5a899;
+  top: 37px;
+  left: 45px;
+}
+.starlight .world-orb {
+  background: #ded0f3aa;
+  width: 45px;
+  height: 45px;
+  top: 38px;
+}
+.world-mini-cloud {
+  position: absolute;
+  width: 70px;
+  height: 13px;
+  background: #fff6;
+  border-radius: 50%;
+  left: 81px;
+  top: 48px;
+}
+.world-mini-cloud:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  border-radius: 50%;
+  left: 12px;
+  bottom: 0;
+  background: inherit;
+}
+.world-mini-cloud.second {
+  top: 77px;
+  left: 12px;
+  transform: scale(0.7);
+  opacity: 0.7;
+}
+.world-mini-hill {
+  position: absolute;
+  left: -20px;
+  width: 140px;
+  height: 45px;
+  bottom: -23px;
+  border-radius: 50%;
+  background: #abc3a4;
+  box-shadow: 110px -12px #c2d2b4;
+}
+.sunset .world-mini-hill {
+  background: #b2bcc8;
+  box-shadow: 110px -2px #b4b4c6;
+  height: 32px;
+  bottom: -13px;
+}
+.moonlight .world-mini-hill {
+  background: #787f9a;
+  box-shadow: 100px -6px #656c8b;
+}
+.starlight .world-mini-hill {
+  background: #bab2d8;
+  box-shadow: 100px -6px #c9bde0;
+}
+.world-twinkle {
+  position: absolute;
+  top: 36px;
+  right: 35px;
+  color: #fffb;
+  font-size: 25px;
+}
+.world-flower {
+  position: absolute;
+  bottom: 1px;
+  left: 80px;
+  font-size: 18px;
+  color: #fff3d2;
+}
+.world-roofs {
+  position: absolute;
+  left: 85px;
+  bottom: 10px;
+  width: 26px;
+  height: 16px;
+  background: #ae8c9c;
+  box-shadow:
+    31px 4px #be9aa5,
+    -30px 6px #b49baa;
+}
+.world-roofs:before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -12px;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 15px solid #ae8c9c;
+}
+.world-mushroom {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  font-size: 30px;
+  color: #d7cee7;
+  transform: rotate(180deg);
+}
+.world-planet {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #e1bfd5;
+  border-radius: 50%;
+  right: 37px;
+  bottom: 23px;
+  transform: rotate(-25deg);
+}
+.world-planet:after {
+  content: "";
+  position: absolute;
+  inset: 9px -9px;
+  border: 2px solid #f4deea88;
+  border-radius: 50%;
+}
+.world-option-caption {
+  padding: 11px 12px 9px;
+}
+.world-option-caption h3 {
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+.world-option-caption p {
+  font-size: 9px;
+  margin: 5px 0 0;
+  color: #a493af;
+}
+.world-details {
+  margin: 20px 0 0;
+  background: #fdf9f5aa;
+  border: 1px solid #fffa;
+  border-radius: 21px;
+  padding: 23px 20px;
+}
+.world-details > .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+.world-details > h3 {
+  font-size: 23px;
+  margin-top: 12px;
+}
+.world-details > p {
+  font-size: 11px;
+  margin: 4px 0 16px;
+}
+.mechanic-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.mechanic-pills > span {
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #eee7f1;
+  font-size: 8px;
+  color: #9a83aa;
+}
+.world-details > .world-guide {
+  font-size: 11px;
+  margin: 16px 0;
+  color: #9c8ba7;
+}
+.world-stats {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.world-stats > span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+  font-size: 14px;
+  color: #a18aaf;
+}
+.world-stats small {
+  display: block;
+  flex-basis: 100%;
+  font-size: 9px;
+  color: #ab9bb4;
+}
+.progress-track {
+  width: 100%;
+  height: 5px;
+  border-radius: 9px;
+  background: #e4dce9;
+  overflow: hidden;
+}
+.progress-track > div {
+  height: 100%;
+  background: #b49dc4;
+  border-radius: inherit;
+}
+.world-details > .unlock-requirement {
+  font-size: 9px;
+  line-height: 1.7;
+  margin: 8px 0 17px;
+}
+.journey-world {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #fff6;
+  border: 1px solid #fff9;
+  border-radius: 30px;
+  margin: 18px auto 0;
+  padding: 10px 16px;
+  font-size: 11px;
+}
+.journey-world small {
+  font-size: 9px;
+  margin-left: 7px;
+  color: #a995b4;
+}
+@media (max-width: 370px) {
+  .world-grid {
+    gap: 9px;
+  }
+  .world-option-caption {
+    padding: 10px 9px;
+  }
+  .world-option-caption h3 {
+    font-size: 12px;
+  }
+  .world-details {
+    padding: 20px 14px;
+  }
+  .world-state {
+    font-size: 7px;
+  }
+}
+.world-moonlight .game-hud,
+.world-starlight .game-hud {
+  color: #fff1ff;
+}
+.world-moonlight .game-hud small,
+.world-starlight .game-hud small {
+  color: #eee3fa;
+}
+.world-moonlight .touch-hint,
+.world-starlight .touch-hint {
+  color: #e5d9ef;
+}
+.world-moonlight .feather-label,
+.world-starlight .feather-label {
+  color: #f6e5af;
+}
+.wind-indicator {
+  position: absolute;
+  top: 112px;
+  width: 100%;
+  text-align: center;
+  color: #a07887;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  pointer-events: none;
+}
+.run-rewards {
+  margin: 14px 0 0;
+}
+.run-rewards p {
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 4px 0;
+  color: #aa8b60;
+}
+.game-hud small {
+  max-width: 240px;
+  font-size: 9px;
+}
+.game-hud {
+  gap: 12px;
+}
+.world-moonlight .overlay,
+.world-starlight .overlay {
+  background: #6e628e99;
+}
+.world-moonlight .game-hud strong,
+.world-starlight .game-hud strong {
+  text-shadow: 0 2px 5px #59476b22;
+}
+.milestone-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: #a18aaf;
+  margin: 26px 0 16px;
+}
+.milestone-summary > svg {
+  color: #b7a074;
+  stroke-width: 1.5;
+}
+.milestone-summary > strong {
+  font-family: Quicksand, sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+.milestone-summary > span {
+  flex-basis: 100%;
+  font-size: 10px;
+  color: #a692ae;
+}
+.milestone-note {
+  font-size: 10px !important;
+  margin-bottom: 25px !important;
+}
+.milestone-claim {
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+.achievement-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
+.achievement-groups > section > h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  margin: 0 0 12px 4px;
+}
+.achievement-groups > section > h3 > span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.achievement-groups > section > h3 > svg {
+  margin-left: auto;
+  margin-right: 5px;
+  color: #ac99b5;
+}
+.achievement {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  border: 1px solid #fff9;
+  background: #fff5;
+  border-radius: 16px;
+  padding: 17px 13px;
+  margin-top: 9px;
+}
+.achievement-icon {
+  width: 29px;
+  height: 31px;
+  background: #f2eaf4;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #b69bc1;
+}
+.achievement-copy {
+  flex: 1;
+  min-width: 0;
+}
+.achievement h4 {
+  font-size: 12px;
+  margin: 0;
+  color: #8b7699;
+  font-weight: 500;
+}
+.achievement-copy p {
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 5px 0 12px;
+}
+.achievement-copy small {
+  display: block;
+  color: #a994b1;
+  font-size: 8px;
+  margin-top: 7px;
+}
+.achievement-reward {
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  color: #b39a6a;
+  margin-top: 3px;
+}
+.achievement-reward svg {
+  fill: #edddad;
+}
+.achievement.complete .achievement-icon {
+  background: #e7eddf;
+  color: #99ac8e;
+}
+.achievement.complete .progress-track > div {
+  background: #afc0a3;
+}
+.achievement.complete {
+  background: #f5f7f06b;
+}
+.achievement.complete .achievement-reward {
+  color: #95a58d;
+}
+.achievement.complete .achievement-reward svg {
+  fill: none;
+}
+.game .modal {
+  max-height: calc(100% - 30px);
+  overflow-y: auto;
+}
+.game .result-stats {
+  margin: 22px 0;
+}
+.progress-bar .location {
+  max-width: 53%;
+  text-align: left;
+}
+@media (max-width: 370px) {
+  .achievement {
+    gap: 8px;
+    padding: 14px 10px;
+  }
+  .achievement h4 {
+    font-size: 11px;
+  }
+  .achievement-copy p {
+    font-size: 9px;
+  }
+  .achievement-icon {
+    width: 25px;
+    height: 28px;
+  }
+  .achievement-reward {
+    font-size: 8px;
+  }
+}
+.boutique-tabs > button {
+  min-height: 44px;
+}
+.topbar .icon-button {
+  width: 40px;
+  height: 40px;
+}
+.expanded .back {
+  min-height: 40px;
+}
+.achievement-link {
+  min-height: 36px;
+  margin-top: 12px;
+}
+.achievement-link + .gentle {
+  margin-top: 6px;
+}
+.reset-preview {
+  min-height: 40px;
+}
+.progress-bar .location {
+  min-height: 30px;
+}
+.home-actions .nav-cards button {
+  min-height: 70px;
+}
+@media (max-width: 650px) {
+  .topbar {
+    height: calc(66px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+  }
+  footer {
+    min-height: calc(37px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .game {
+    height: calc(
+      100svh - 103px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    );
+  }
+  .topbar .icon-button {
+    width: 40px;
+    height: 40px;
+  }
+  .home {
+    padding-bottom: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti {
+    display: none;
+  }
+}
+.boutique-tabs {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.boutique-tabs > button {
+  flex: 1 0 auto;
+  padding: 11px 7px;
+}
+@media (max-width: 370px) {
+  .boutique-tabs {
+    gap: 2px;
+    padding: 4px;
+  }
+  .boutique-tabs > button {
+    font-size: 9px;
+    padding: 11px 5px;
+  }
+}
