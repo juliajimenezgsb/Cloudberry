@@ -6,7 +6,7 @@ A cozy, mobile-friendly jumping game built with React, TypeScript, Vite, and HTM
 
 **Play online:** https://cloudberry-cozy-climb.plaidmill3.chatgpt.site
 
-The hosted version currently requires access to the private site. You can also run the complete game locally using the instructions below, without a hosting account.
+The hosted game is public: anyone with the link can open and play it. You can also run the complete game locally using the instructions below.
 
 ## Rules and controls
 
